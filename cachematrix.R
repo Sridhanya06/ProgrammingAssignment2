@@ -8,9 +8,7 @@ makeVector <- function(x = numeric()) {
         setmean <- function(mean) m <<- mean
         getmean <- function() m
         list(set = set, get = get,
-             setmean = setmean,
-             getmean = getmean)
-}
+
 cachemean <- function(x, ...) {
         m <- x$getmean()
         if(!is.null(m)) {
@@ -21,4 +19,4 @@ cachemean <- function(x, ...) {
         m <- mean(data, ...)
         x$setmean(m)
         m
-}
+        
